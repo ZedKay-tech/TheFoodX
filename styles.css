@@ -60,18 +60,18 @@ nav ul li a:hover {
 .product-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    max-height: none !important; /* Prevents hiding extra products */
+    justify-content: center; /* Centers the products */
+    gap: 20px; /* Adds spacing */
+    max-width: 1200px; /* Restricts width for better alignment */
+    margin: auto; /* Centers the grid */
 }
-
 
 .product {
     background-color: white;
     padding: 15px;
-    margin: 10px;
     border: 2px solid #ddd;
-    width: 230px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 250px; /* Adjust to fit multiple items in a row */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     transition: transform 0.3s ease;
 }
@@ -85,14 +85,9 @@ nav ul li a:hover {
 .product p {
     font-size: 16px;
     font-weight: bold;
-    color: #000000;
-    margin-top: 10px;
+    text-align: center;
 }
 
-/* Product Hover Effect */
-.product:hover {
-    transform: scale(1.05);
-}
 
 /* Buttons */
 button {
