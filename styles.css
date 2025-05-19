@@ -5,6 +5,12 @@ body {
     text-align: center;
 }
 
+header img {
+    width: 150px; /* Adjust size as needed */
+    display: block;
+    margin: 0 auto;
+}
+
 header {
     background-color: #1E5631;
     color: white;
