@@ -1,7 +1,10 @@
+// Contact Form Submission
 document.querySelector("form").addEventListener("submit", function(event) {
     event.preventDefault();
     alert("Thank you for contacting TheFoodX! We'll be in touch soon.");
 });
+
+// Product List
 const products = [
     { name: "Paragon Classic Burger 4oz", price: "£21.99", image: "placeholder.jpg" },
     { name: "Paragon Ali Baba Burger 4oz", price: "£28.99", image: "placeholder.jpg" },
@@ -57,14 +60,14 @@ const products = [
     { name: "Lutosa Coated Classic Cut Fries 10x10", price: "£15.49", image: "placeholder.jpg" }
 ];
 
-// Pagination setup (same as before)
+// Pagination Setup
 const itemsPerPage = 30;
 let currentPage = 1;
 
 function displayProducts() {
     const productList = document.getElementById("product-list");
     productList.innerHTML = "";
-    
+
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
     const paginatedProducts = products.slice(startIndex, endIndex);
@@ -80,6 +83,7 @@ function displayProducts() {
     document.getElementById("pageNumber").innerText = `Page ${currentPage}`;
 }
 
+// Pagination Buttons
 document.getElementById("nextPage").addEventListener("click", () => {
     if (currentPage * itemsPerPage < products.length) {
         currentPage++;
