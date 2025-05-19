@@ -18,7 +18,7 @@ const products = [
     { name: "Frozen Garlic Cloves", price: "£14.99", image: "garlic cloves frozen.jpg" },
     { name: "Habibi Halal Pepperoni", price: "£10.99", image: "Habibi halal pepperoni.jpg" },
     { name: "Aminah Halal Turkey Ham", price: "£4.99", image: "halal shredded turkey ham aminha.jpg" },
-    { name: "Aviko Jalapeno Bites", price: "£7.49", image: "Jalapeno-aviko.jpg" },
+    { name: "Aviko Jalapeno Bites", price: "£7.49", image: "Jalapeno-aviko.png" },
     { name: "Kerrymaid Cheese Slices", price: "£8.99", image: "kerrymaid cheese slices.jpg" },
     { name: "King Prawn", price: "£6.49", image: "king prawn.jpg" },
     { name: "Lamb Weston Mozzarella Sticks", price: "£8.99", image: "lamb weston mozzarella sticks.jpg" },
