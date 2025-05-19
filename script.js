@@ -6,7 +6,7 @@ document.querySelector("form").addEventListener("submit", function(event) {
 
 // Product List
 const products = [
-    { name: "Paragon Classic Burger 4oz", price: "£21.99", image: "placeholder.jpg" },
+    { name: "Paragon Classic Burger 4oz", price: "£21.99", image: "paragon basic.jpg" },
     { name: "Paragon Ali Baba Burger 4oz", price: "£28.99", image: "placeholder.jpg" },
     { name: "Paragon Gourmet Burger 6oz", price: "£32.99", image: "placeholder.jpg" },
     { name: "Americana Seeded Buns 4.5''", price: "£8.49", image: "placeholder.jpg" },
