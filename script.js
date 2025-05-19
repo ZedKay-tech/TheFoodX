@@ -10,7 +10,7 @@ const products = [
     { name: "Paragon Ali Baba Burger 4oz", price: "£28.99", image: "ali baba halal.jpg" },
     { name: "Paragon Gourmet Burger 6oz", price: "£32.99", image: "paragon gourmet 6oz.jpg" },
     { name: "Americana Seeded Buns 4.5''", price: "£8.49", image: "americana 4.5.jpg" },
-    { name: "Americana Seeded Buns 5''", price: "£9.99", image: "americana buns 5.jpg" },
+    { name: "Americana Seeded Buns 5''", price: "£9.99", image: "Americana buns 5.jpg" },
     { name: "Aviko Vegetable Burger", price: "£15.99", image: "aviko veggie burger.jpg" },
     { name: "Aviko Battered Onion Rings", price: "£3.99", image: "aviko-battered-onion-rings-6x1kg.jpg" },
     { name: "Chef’s Pride Halal Pepperoni", price: "£8.49", image: "chefs pride pepperoni.jpg" },
