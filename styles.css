@@ -60,10 +60,10 @@ nav ul li a:hover {
 .product-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Centers the products */
-    gap: 20px; /* Adds spacing */
-    max-width: 1200px; /* Restricts width for better alignment */
-    margin: auto; /* Centers the grid */
+    justify-content: center; /* Centers products */
+    gap: 20px;
+    max-width: 1200px; /* Sets a proper width */
+    margin: 0 auto; /* Ensures it's centered */
 }
 
 .product {
