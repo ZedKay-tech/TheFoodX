@@ -22,45 +22,49 @@ const products = [
     { name: "Lamb Weston Private Reserve Fries", price: "£15.49", image: "placeholder.jpg" },
     { name: "Lamb Weston Seasoned Twisters", price: "£7.49", image: "placeholder.jpg" },
     { name: "Lamb Weston Ziggy Fries", price: "£21.99", image: "placeholder.jpg" },
+    { name: "Lamb Weston Battered Onion Rings", price: "£4.49", image: "placeholder.jpg" },
+    { name: "Lamb Weston Skin-on Wedges", price: "£6.24", image: "placeholder.jpg" },
     { name: "Breaded Garlic Mushrooms", price: "£4.49", image: "placeholder.jpg" },
     { name: "McCain Breaded Mozzarella Sticks", price: "£7.99", image: "placeholder.jpg" },
     { name: "McCain Chilli Cheese Nuggets", price: "£7.99", image: "placeholder.jpg" },
     { name: "McCain Fast Food Thin Fries 3/8", price: "£14.99", image: "placeholder.jpg" },
     { name: "McCain Fast Food Julienne Fries 7/7", price: "£14.99", image: "placeholder.jpg" },
+    { name: "McCain Vegetable Burger", price: "£6.66", image: "placeholder.jpg" },
+    { name: "Meadow Vale Breaded Fillet", price: "£7.49", image: "placeholder.jpg" },
+    { name: "Meadow Vale Crispy Battered Fillets", price: "£18.99", image: "placeholder.jpg" },
+    { name: "Meadow Vale Battered Chicken Steak", price: "£5.49", image: "placeholder.jpg" },
     { name: "Meadow Vale Battered Chicken Nuggets", price: "£5.49", image: "placeholder.jpg" },
     { name: "Meadow Vale Southern Fried Chicken", price: "£52.99", image: "placeholder.jpg" },
+    { name: "Meadow Vale Southern Fried Fillets", price: "£8.49", image: "placeholder.jpg" },
+    { name: "Meadow Vale Spicy Chicken Fillets", price: "£17.99", image: "placeholder.jpg" },
+    { name: "Meadow Vale Chicken Fillet Bites", price: "£8.49", image: "placeholder.jpg" },
+    { name: "Mr Prawn Cooked Prawns", price: "£4.49", image: "placeholder.jpg" },
+    { name: "Leicester Bakery Sabat Pitta Bread", price: "£13.99", image: "placeholder.jpg" },
+    { name: "Riva Garlic Bread Slices", price: "£18.99", image: "placeholder.jpg" },
+    { name: "Riverside Chicken Steaks", price: "£5.99", image: "placeholder.jpg" },
+    { name: "Seven Tides Fudge Cake Slices", price: "£14.99", image: "placeholder.jpg" },
+    { name: "Seven Tides Strawberry Cheesecake Slices", price: "£15.99", image: "placeholder.jpg" },
     { name: "Tortilla Wraps Love Tortilla 12''", price: "£19.99", image: "placeholder.jpg" },
     { name: "Youngs Cod Fish Fingers", price: "£10.99", image: "placeholder.jpg" },
-    { name: "Kings Crunchy Coated Fries", price: "£13.99", image: "placeholder.jpg" },
+    { name: "Suprimo Cheese 70/30", price: "£55.99", image: "placeholder.jpg" },
     { name: "Elite Cheese 80/20", price: "£57.99", image: "placeholder.jpg" },
-    { name: "Paragon Chicken Steak Burger", price: "£16.99", image: "placeholder.jpg" },
-    { name: "Breaded Fish Fillet", price: "£22.99", image: "placeholder.jpg" },
-    { name: "Habibi Halal Beef Pepperoni", price: "£12.99", image: "placeholder.jpg" },
-    { name: "Mozzarella Cheese Block", price: "£49.99", image: "placeholder.jpg" },
-    { name: "Potato Wedges", price: "£9.99", image: "placeholder.jpg" },
-    { name: "Prawn Tempura", price: "£27.99", image: "placeholder.jpg" },
-    { name: "Fried Calamari Rings", price: "£23.99", image: "placeholder.jpg" },
-    { name: "Halal Beef Bacon", price: "£8.99", image: "placeholder.jpg" },
-    { name: "Crumbed Chicken Tenders", price: "£18.99", image: "placeholder.jpg" },
-    { name: "Smoked Salmon Slices", price: "£14.99", image: "placeholder.jpg" },
-    { name: "Seafood Mix", price: "£19.99", image: "placeholder.jpg" },
-    { name: "Halloumi Cheese Block", price: "£10.99", image: "placeholder.jpg" },
-    { name: "Aviko Curly Fries", price: "£7.99", image: "placeholder.jpg" },
-    { name: "Parmesan Cheese", price: "£15.99", image: "placeholder.jpg" },
-    { name: "Breaded Shrimp", price: "£22.49", image: "placeholder.jpg" },
-    { name: "Love Tortilla Wraps 10''", price: "£16.99", image: "placeholder.jpg" },
-    { name: "Hash Brown Patties", price: "£9.99", image: "placeholder.jpg" },
-    { name: "Feta Cheese Crumbles", price: "£12.99", image: "placeholder.jpg" },
-    { name: "Crispy Fried Chicken Wings", price: "£22.99", image: "placeholder.jpg" }
+    { name: "Lutosa Chips Straight Cut Fries 7/16", price: "£15.99", image: "placeholder.jpg" },
+    { name: "Lamb Weston Private Reserve Fries 7/16", price: "£14.99", image: "placeholder.jpg" },
+    { name: "Discovery Tortilla Wrap", price: "£21.69", image: "placeholder.jpg" },
+    { name: "Garlic and Herb Spread", price: "£12.99", image: "placeholder.jpg" },
+    { name: "Salimah Diced Chicken Breast", price: "£8.49", image: "placeholder.jpg" },
+    { name: "Kings Crunchy Coated Fries 10x10", price: "£13.99", image: "placeholder.jpg" },
+    { name: "Lutosa Coated Classic Cut Fries 10x10", price: "£15.49", image: "placeholder.jpg" }
 ];
 
+// Pagination setup (same as before)
 const itemsPerPage = 30;
 let currentPage = 1;
 
 function displayProducts() {
     const productList = document.getElementById("product-list");
     productList.innerHTML = "";
-
+    
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
     const paginatedProducts = products.slice(startIndex, endIndex);
@@ -68,10 +72,8 @@ function displayProducts() {
     paginatedProducts.forEach(product => {
         const productDiv = document.createElement("div");
         productDiv.classList.add("product");
-        productDiv.innerHTML = `
-            <img src="${product.image}" alt="${product.name}">
-            <p>${product.name} - ${product.price}</p>
-        `;
+        productDiv.innerHTML = `<img src="${product.image}" alt="${product.name}">
+                                <p>${product.name} - ${product.price}</p>`;
         productList.appendChild(productDiv);
     });
 
